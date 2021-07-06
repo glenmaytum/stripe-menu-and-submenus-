@@ -10,10 +10,8 @@ const Navbar = () => {
 		const tempBtn = e.target.getBoundingClientRect();
 		const center = (tempBtn.left + tempBtn.right) / 2;
 		const bottom = tempBtn.bottom - 3;
-
 		openSubmenu(page, { center, bottom });
 	};
-
 	const handleSubmenu = (e) => {
 		if (!e.target.classList.contains("link-btn")) {
 			closeSubmenu();
@@ -55,9 +53,7 @@ const Navbar = () => {
 						</button>
 					</li>
 				</ul>
-				<button className="btn signin-btn" onMouseOver={displaySubmenu}>
-					Sign in
-				</button>
+				<button className="btn signin-btn">Sign in</button>
 			</div>
 		</nav>
 	);

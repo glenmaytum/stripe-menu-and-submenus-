@@ -4,8 +4,8 @@ import { useGlobalContext } from "./context";
 const Submenu = () => {
 	const {
 		isSubmenuOpen,
-		location,
 		page: { page, links },
+		location,
 	} = useGlobalContext();
 
 	const container = useRef(null);

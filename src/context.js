@@ -6,8 +6,8 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-	const [location, setLocation] = useState({});
 	const [page, setPage] = useState({ page: "", links: [] });
+	const [location, setLocation] = useState({});
 
 	const openSidebar = () => {
 		setIsSidebarOpen(true);
@@ -31,14 +31,14 @@ export const AppProvider = ({ children }) => {
 	return (
 		<AppContext.Provider
 			value={{
-				isSubmenuOpen,
 				isSidebarOpen,
-				location,
-				page,
-				openSubmenu,
 				openSidebar,
-				closeSubmenu,
 				closeSidebar,
+				isSubmenuOpen,
+				openSubmenu,
+				closeSubmenu,
+				page,
+				location,
 			}}
 		>
 			{children}
